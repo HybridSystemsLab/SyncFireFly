@@ -1,8 +1,9 @@
 function xplus = gammafunc(x,e)
-    if x + x^2*e > 1
+    phaseresponse = x^2*e; %it is possible to adjust the phase response curve to suit other scenarios.
+    if x + phaseresponse > 1
         xplus = 0;
-    elseif x + x^2*e < 1
-        xplus = x + x^2*e;
+    elseif x + phaseresponse < 1
+        xplus = x + phaseresponse;
     else
         p = rand(1);
         if p > 0.5
